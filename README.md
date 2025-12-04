@@ -1,1 +1,5 @@
-# Typescript Series in Hindi
+# TypeScript Series in Hindi 🚀❤️
+
+## 01. Introduction to TypeScript
+
+## 02. How TypeScript Works
