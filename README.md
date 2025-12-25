@@ -15,3 +15,5 @@
 ## 07. Type Assertion, Type Unknown and Type Never in TypeScript
 
 ## 08. Types and Interface in TypeScript
+
+## 09. Object Discussion in TypeScript
