@@ -9,3 +9,7 @@
 ## 04. Type Annotations and Inference in TypeScript
 
 ## 05. Understanding Unions & Any
+
+## 06. Type Narrowing & Type Guards
+
+
