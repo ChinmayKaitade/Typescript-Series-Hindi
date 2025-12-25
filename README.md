@@ -8,3 +8,4 @@
 
 ## 04. Type Annotations and Inference in TypeScript
 
+## 05. Understanding Unions & Any
