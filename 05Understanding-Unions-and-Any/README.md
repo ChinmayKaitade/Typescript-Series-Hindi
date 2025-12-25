@@ -2,7 +2,7 @@
 
 ### 🔹 1. Union Types (`|`)
 
-Union ka matlab hota hai **ek variable multiple data types accept kar sakta hai**, but **limited & controlled** way me.
+A **union type** allows a variable to accept **multiple data types**, but in a **controlled and safe** way.
 
 ### ✅ Syntax
 
@@ -20,12 +20,12 @@ let subs: number | string = "1M";
 
 📌 Explanation:
 
-- `subs` **number bhi ho sakta hai** ya **string bhi**
-- `"1M"` valid hai
-- `1000000` bhi valid hota
+- `subs` can be **either a number or a string**
+- `"1M"` is valid
+- `1000000` would also be valid
 
-👉 Use case:
-Subscribers count, IDs, API responses jaha format change ho sakta hai.
+👉 Use cases:
+Subscriber counts, IDs, API responses where the format may vary.
 
 ---
 
@@ -37,13 +37,13 @@ let apiRequestStatus: "pending" | "success" | "error" = "pending";
 
 📌 Explanation:
 
-- Variable **sirf 3 values** le sakta hai:
+- The variable can accept **only these 3 values**:
 
   - `"pending"`
   - `"success"`
   - `"error"`
 
-- Koi aur value assign karoge toh **TypeScript error dega**
+- Assigning any other value will cause a **TypeScript error**
 
 ❌ Invalid:
 
@@ -57,11 +57,11 @@ apiRequestStatus = "done"; // Error
 apiRequestStatus = "success";
 ```
 
-👉 Real-world use:
+👉 Real-world use cases:
 
-- API status
+- API request status
 - Payment status
-- Form state handling
+- Form state management
 
 ---
 
@@ -74,10 +74,10 @@ airlineSeat = "aisle";
 
 📌 Explanation:
 
-- Seat sirf **limited options** me se hi ho sakti hai
-- Wrong input prevent ho jata hai
+- The seat can be selected only from **predefined options**
+- Prevents invalid or wrong input
 
-👉 Real-world use:
+👉 Real-world use cases:
 
 - Dropdown values
 - User roles
@@ -85,7 +85,7 @@ airlineSeat = "aisle";
 
 ---
 
-## 🔹 2. `undefined` ke saath Union
+## 🔹 2. Union with `undefined`
 
 ```ts
 let currentOrder: string | undefined;
@@ -93,12 +93,12 @@ let currentOrder: string | undefined;
 
 📌 Explanation:
 
-- `currentOrder`:
+- `currentOrder` can be:
 
-  - `string` ho sakta hai
-  - ya phir `undefined`
+  - a `string`
+  - or `undefined`
 
-- Useful jab value **baad me assign hone wali ho**
+- Useful when the value is **assigned later**
 
 ---
 
@@ -120,47 +120,47 @@ for (let order of orders) {
 
 📌 Explanation:
 
-- Pehle `currentOrder` undefined hota hai
-- Jab `"28"` milta hai, value assign ho jati hai
-- TypeScript safely handle karta hai
+- Initially, `currentOrder` is `undefined`
+- When `"28"` is found, the value gets assigned
+- TypeScript safely handles both possibilities
 
 ---
 
 ## 🔹 3. `any` Type (❌ Avoid Using It)
 
 ```ts
-let currentOrder; // TypeScript treats this as : any
+let currentOrder; // TypeScript treats this as `any`
 ```
 
-📌 Problem with `any`:
+📌 Problems with `any`:
 
-- TypeScript **type checking bandh kar deta hai**
-- Galat value bhi assign ho jati hai
-- Bugs runtime pe aate hain
+- TypeScript **disables type checking**
+- Invalid values can be assigned
+- Errors appear at runtime instead of compile time
 
-❌ Dangerous:
+❌ Dangerous example:
 
 ```ts
-currentOrder = 42; // Allowed if type is any
+currentOrder = 42; // Allowed if the type is `any`
 ```
 
 ---
 
-### ✅ Better Alternative (Use Union)
+### ✅ Better Alternative (Use Union Types)
 
 ```ts
 let currentOrder: string | undefined;
 ```
 
-📌 Benefit:
+📌 Benefits:
 
-- Safe code
-- Better IntelliSense
+- Safer code
+- Better IntelliSense support
 - Compile-time error detection
 
 ---
 
-## 🔥 Any vs Union (Quick Comparison)
+## 🔥 `any` vs Union (Quick Comparison)
 
 | Feature         | `any`      | `union`         |
 | --------------- | ---------- | --------------- |
@@ -175,5 +175,5 @@ let currentOrder: string | undefined;
 
 💡 **Rule of Thumb**:
 
-> “Avoid `any` as much as possible.
-> Use **Union Types** to keep code flexible but safe.”
+> “Avoid using `any` as much as possible.
+> Use **Union Types** to keep your code flexible yet type-safe.”
