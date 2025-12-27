@@ -19,3 +19,6 @@
 ## 09. Object Discussion in TypeScript
 
 ## 10. Functions in TypeScript
+
+## 11. Array, Enum and Tuples in TypeScript
+
