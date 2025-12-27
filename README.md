@@ -23,3 +23,5 @@
 ## 11. Array, Enum and Tuples in TypeScript
 
 ## 12. OOPS Concepts in TypeScript
+
+## 13. Interface and Generics in TypeScript
