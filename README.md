@@ -25,3 +25,5 @@
 ## 12. OOPS Concepts in TypeScript
 
 ## 13. Interface and Generics in TypeScript
+
+## 14. Type Definitions and Axios in TypeScript
